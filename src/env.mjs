@@ -8,6 +8,11 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    S3_UPLOAD_KEY: z.string(),
+    S3_UPLOAD_SECRET: z.string(),
+    S3_UPLOAD_BUCKET: z.string(),
+    S3_UPLOAD_REGION: z.string(),
+    UNSTRUCTURED_API_Key: z.string(),
   },
 
   /**
@@ -25,6 +30,11 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    S3_UPLOAD_KEY: process.env.S3_UPLOAD_KEY,
+    S3_UPLOAD_SECRET: process.env.S3_UPLOAD_SECRET,
+    S3_UPLOAD_BUCKET: process.env.S3_UPLOAD_BUCKET,
+    S3_UPLOAD_REGION: process.env.S3_UPLOAD_REGION,
+    UNSTRUCTURED_API_Key: process.env.UNSTRUCTURED_API_Key
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
